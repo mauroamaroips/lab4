@@ -34,22 +34,23 @@ if __name__ == '__main__':
     preencher_dicionario_fibonacci_v2(dicionario_fibonacci, qtd_valores)
     tempo = time.time() - inicio
     print(f'{tempo:.10f}s para calcular os primeiros {qtd_valores} termos da série de Fibonacci de forma sequencial')
-    mostrar_dicionario(dicionario_fibonacci)
+    #mostrar_dicionario(dicionario_fibonacci)
 
 # Nível 3
 
 # Pergunta 1
 
 # Este programa implementa duas funções para preencher um dicionário com os primeiros n termos da sequência
-# de Fibonacci e uma função para mostrar os valores do dicionário na tela.
+# de Fibonacci e uma função para mostrar os valores do dicionário.
 
 # O programa utiliza dois métodos diferentes para calcular os valores da sequência de Fibonacci:
 # a função "fibonacci" que calcula os valores sequencialmente e a função "preencher_dicionario_fibonacci_v2"
-# que utiliza a definição recursiva da sequência de Fibonacci para calcular os valores.
+# que utiliza a definição recursiva da sequência de Fibonacci para calcular os termos da sequência.
 
 # O programa imprime o tempo de execução de cada método e, em seguida, imprime os valores da
 # sequência de Fibonacci armazenados no dicionário.
-# No exemplo dado, o programa calcula e imprime os primeiros 10 termos da sequência de Fibonacci.
+# No exemplo dado, o programa calcula e imprime os primeiros 10 termos da sequência de Fibonacci (posteriormente
+# este valor é aumentado para 10000).
 
 # Pergunta 2
 

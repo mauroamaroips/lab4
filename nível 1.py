@@ -36,7 +36,8 @@ if __name__ == '__main__':
 # Nível 1
 
 # q = Queue() - Cria uma fila vazia com um tamanho ilimitado para armazenar elementos em memória.
-# A fila pode ser usada para comunicação e sincronização entre threads.
+# A fila pode ser usada para comunicação e sincronização entre threads e processos (nestes caso estamos a trabalhar
+# com processos).
 
 # q.put(valor) - Adiciona o valor especificado no final da fila q.
 # Se a fila estiver cheia, a operação irá bloquear até que haja espaço disponível.

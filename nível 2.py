@@ -1,5 +1,6 @@
 import multiprocessing as mp
 
+# Relativo à solução utilizando pipes
 def produtor_pipe(pipe_conn):
     grupo_alunos = ['Mauro', 'David', 'Jorge']
     pipe_conn.send(grupo_alunos)
@@ -11,6 +12,7 @@ def consumidor_pipe(pipe_conn):
     print(f"{grupo_alunos} recebido pelo subprocesso consumidor_pipe ({mp.current_process().name})")
     pipe_conn.close()
 
+# Relativo à solução utilizando queues
 def produtor_queue(queue):
     grupo_alunos = ['Amaro', 'Teixeira', 'Costa']
     queue.put(grupo_alunos)
@@ -23,6 +25,8 @@ def consumidor_queue(queue):
 if __name__ == "__main__":
     print("processo (MainProcess)")
 
+    # Comunicação usando um pipe
+
     print("Comunicação com Pipe")
     parent_conn, child_conn = mp.Pipe()
     produtor_pipe_process = mp.Process(target=produtor_pipe, args=(child_conn,))
@@ -33,6 +37,8 @@ if __name__ == "__main__":
 
     produtor_pipe_process.join()
     consumidor_pipe_process.join()
+
+    # Comunicação usando um queue
 
     print("Comunicação com Queue")
     queue = mp.Queue()
